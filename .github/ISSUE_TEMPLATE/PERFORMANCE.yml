@@ -1,0 +1,82 @@
+name: "⚡ Performance"
+description: Track a performance issue or optimization task
+title: "⚡ [PERF] - <title>"
+labels: ["Performance", "Needs Triage"]
+body:
+  - type: input
+    id: implementation_pr
+    attributes:
+      label: "Implementation PR (Optional)"
+      description: Pull request that addresses this performance issue
+      placeholder: "#Pull Request ID"
+    validations:
+      required: false
+
+  - type: input
+    id: reference_issues
+    attributes:
+      label: "Reference Issues (Optional)"
+      description: Related issues
+      placeholder: "#Issues IDs"
+    validations:
+      required: false
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: "Current Behavior"
+      description: >
+        Describe the current performance problem. Include metrics or benchmarks if available.
+      placeholder: |
+        The API endpoint /foo takes ~3s to respond under 100 concurrent requests.
+        Memory usage spikes to 2GB during batch processing.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "Expected / Target Behavior"
+      description: >
+        What is the acceptable performance target?
+      placeholder: |
+        Response time should be under 500ms.
+        Memory usage should stay below 512MB.
+    validations:
+      required: true
+
+  - type: textarea
+    id: root_cause
+    attributes:
+      label: "Root Cause (if known)"
+      description: >
+        What do you suspect is causing the performance issue?
+      placeholder: |
+        N+1 query in the ORM layer, or missing index on column X.
+    validations:
+      required: false
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: "Approach"
+      description: >
+        Proposed optimization strategy.
+      placeholder: |
+        1. Add database index on column X
+        2. Cache result of expensive computation with TTL
+        3. ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: profiling
+    attributes:
+      label: "Profiling / Benchmark Results"
+      description: >
+        Attach profiling output, flamegraphs, or benchmark numbers if available.
+      placeholder: |
+        Before: avg 3200ms, p99 8000ms
+        After:  avg  400ms, p99  900ms
+    validations:
+      required: false

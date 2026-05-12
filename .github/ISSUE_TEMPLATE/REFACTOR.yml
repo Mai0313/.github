@@ -1,0 +1,82 @@
+name: "🔨 Refactor"
+description: Track a code refactoring task
+title: "🔨 [REFACTOR] - <title>"
+labels: ["Refactor", "Needs Triage"]
+body:
+  - type: input
+    id: implementation_pr
+    attributes:
+      label: "Implementation PR (Optional)"
+      description: Pull request that implements this refactor
+      placeholder: "#Pull Request ID"
+    validations:
+      required: false
+
+  - type: input
+    id: reference_issues
+    attributes:
+      label: "Reference Issues (Optional)"
+      description: Related issues
+      placeholder: "#Issues IDs"
+    validations:
+      required: false
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivation"
+      description: >
+        Why does this code need to be refactored? What problem does it solve?
+      placeholder: |
+        The current implementation is hard to maintain because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Scope"
+      description: >
+        Which files, modules, or components are involved?
+      placeholder: |
+        - src/module/foo.py
+        - src/module/bar.py
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: "Approach"
+      description: >
+        Describe the refactoring strategy or plan.
+      placeholder: |
+        1. Extract class X into its own module
+        2. Replace repeated logic with a shared utility
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_outcome
+    attributes:
+      label: "Expected Outcome"
+      description: >
+        What will be better after the refactor? (readability, testability, performance, etc.)
+      placeholder: |
+        - Reduced code duplication
+        - Easier to unit test
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "Risks & Breaking Changes"
+      description: >
+        Any potential risks, regressions, or breaking changes to watch out for?
+      placeholder: |
+        - Public API signature change in X
+        - May affect downstream consumers of Y
+    validations:
+      required: false

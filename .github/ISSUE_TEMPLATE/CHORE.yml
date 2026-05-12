@@ -1,0 +1,62 @@
+name: "🔧 Chore"
+description: Track a maintenance or housekeeping task (dependencies, CI/CD, tooling, config)
+title: "🔧 [CHORE] - <title>"
+labels: ["Chore", "Needs Triage"]
+body:
+  - type: input
+    id: implementation_pr
+    attributes:
+      label: "Implementation PR (Optional)"
+      description: Pull request that addresses this chore
+      placeholder: "#Pull Request ID"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: chore_type
+    attributes:
+      label: "Chore Type"
+      description: What category does this maintenance task fall into?
+      options:
+        - Dependency Update
+        - CI/CD
+        - Tooling / Dev Environment
+        - Configuration
+        - Code Cleanup
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: >
+        What maintenance work needs to be done and why?
+      placeholder: |
+        Bump package X from v1.2 to v2.0 to pick up security fixes.
+        Update the CI pipeline to use the new runner image.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivation"
+      description: >
+        Why is this chore necessary now? (security fix, deprecated API, team standard, etc.)
+      placeholder: |
+        The current version has a known CVE / is no longer maintained.
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Potential Impact"
+      description: >
+        Any risk of breakage or side effects to be aware of?
+      placeholder: |
+        This dependency has a breaking change in its config format.
+    validations:
+      required: false

@@ -1,0 +1,57 @@
+name: "✅ Task"
+description: Track a general task or to-do item
+title: "✅ [TASK] - <title>"
+labels: ["Task", "Needs Triage"]
+body:
+  - type: input
+    id: implementation_pr
+    attributes:
+      label: "Implementation PR (Optional)"
+      description: Pull request that completes this task
+      placeholder: "#Pull Request ID"
+    validations:
+      required: false
+
+  - type: input
+    id: reference_issues
+    attributes:
+      label: "Reference Issues (Optional)"
+      description: Related issues or parent tasks
+      placeholder: "#Issues IDs"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: >
+        What needs to be done? Provide enough context to understand and start the task.
+      placeholder: |
+        A clear description of the task and why it needs to be done.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: >
+        How will you know this task is done? List the conditions that must be met.
+      placeholder: |
+        - [ ] Condition A is satisfied
+        - [ ] Condition B is verified
+        - [ ] Tests pass
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: "Additional Notes"
+      description: >
+        Any extra context, constraints, or links that might be helpful.
+      placeholder: |
+        Links to relevant docs, design decisions, or dependencies.
+    validations:
+      required: false
