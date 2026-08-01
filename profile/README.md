@@ -1,7 +1,7 @@
 ### About Me
 
-- **Software Engineer** at **Google** — Firmware for Pixel SoCs (TF-A / RF-A)
-- Formerly **ML Engineer** at **MediaTek** — AI for semiconductor design
+- **Software Engineer** at **Google Inc.**: Firmware for Pixel SoCs (TF-A / RF-A)
+- Formerly **Machine Learning Engineer** at **MediaTek Inc.**: AI for semiconductor design
 - Interested in **firmware**, **AI/ML**, **multi-agent systems**, and **open source**
 
 ---
