@@ -95,7 +95,7 @@ Allowed types:
 | `style` | Formatting or stylistic changes that do not affect behavior |
 | `test` | Adding or correcting tests |
 | `build` | Build system changes |
-| `chore` | Build, tooling, or auxiliary changes |
+| `chore` | Tooling or auxiliary changes |
 | `ci` | Continuous integration changes |
 | `revert` | Reverting a previous commit |
 
