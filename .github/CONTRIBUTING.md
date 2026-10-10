@@ -90,7 +90,7 @@ Allowed types:
 | `feat` | A new feature |
 | `fix` | A bug fix |
 | `refactor` | A code change that neither fixes a bug nor adds a feature |
-| `doc` | Documentation-only changes |
+| `docs` | Documentation-only changes |
 | `perf` | A performance improvement |
 | `style` | Formatting or stylistic changes that do not affect behavior |
 | `test` | Adding or correcting tests |
